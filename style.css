@@ -1,0 +1,207 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+body > header {
+  background-color: #1a3c6e;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+body > header h1 {
+  margin: 0 0 10px 0;
+}
+
+body > header p {
+  margin: 3px 0;
+}
+
+/* Navigation bar */
+body > nav {
+  background-color: #0f2a4f;
+  text-align: center;
+  padding: 10px;
+}
+
+body > nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+}
+
+body > nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  width: 85%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+h2 {
+  color: #1a3c6e;
+  border-bottom: 2px solid #1a3c6e;
+  padding-bottom: 5px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a3c6e;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Code blocks */
+pre {
+  background-color: #222;
+  color: #eee;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Feature boxes */
+.box {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Bad and good example boxes */
+.bad {
+  border: 2px solid red;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.bad h3 {
+  color: red;
+}
+
+.good {
+  border: 2px solid green;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.good h3 {
+  color: green;
+}
+
+/* Layout demo */
+#layout {
+  border: 2px dashed #1a3c6e;
+  padding: 10px;
+}
+
+#layout header, #layout nav, #layout footer, #layout main, #layout aside, #layout article {
+  border: 1px solid #1a3c6e;
+  background-color: #e6efff;
+  padding: 10px;
+  margin: 5px;
+  width: auto;
+  text-align: left;
+  color: #222;
+}
+
+#layout article {
+  background-color: white;
+}
+
+#middle {
+  display: flex;
+}
+
+#middle main {
+  flex: 3;
+}
+
+#middle aside {
+  flex: 1;
+}
+
+/* Form */
+input {
+  padding: 5px;
+}
+
+button {
+  background-color: #1a3c6e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0f2a4f;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+#formMessage, #noteMessage {
+  color: green;
+  font-weight: bold;
+}
+
+canvas {
+  border: 1px solid #999;
+  background-color: white;
+}
+
+/* Footer */
+#pageFooter {
+  background-color: #1a3c6e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  main {
+    width: 95%;
+  }
+
+  #middle {
+    display: block;
+  }
+}

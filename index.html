@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML vs HTML5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>HTML vs HTML5</h1>
+    <p>Full Stack Development Assignment</p>
+    <p>Submitted by: Sarvesh Barale</p>
+  </header>
+
+  <nav>
+    <a href="#intro">Introduction</a>
+    <a href="#difference">Differences</a>
+    <a href="#features">HTML5 Features</a>
+    <a href="#examples">Good vs Bad HTML</a>
+    <a href="#demo">Demo</a>
+    <a href="#conclusion">Conclusion</a>
+  </nav>
+
+  <main>
+
+    <section id="intro">
+      <h2>1. Introduction</h2>
+      <p>HTML stands for HyperText Markup Language. It is used to create the structure of a web page. HTML5 is the latest version of HTML.</p>
+      <p>In the older HTML (HTML 4.01 and before) we had to use plugins like Flash for video and many &lt;div&gt; tags for the layout. HTML5 added new tags, new form inputs, audio and video support, canvas and many APIs, so these things can now be done without extra plugins.</p>
+    </section>
+
+    <section id="difference">
+      <h2>2. Difference between HTML and HTML5</h2>
+      <table>
+        <tr>
+          <th>Point</th>
+          <th>HTML (older versions)</th>
+          <th>HTML5</th>
+        </tr>
+        <tr>
+          <td>Doctype</td>
+          <td>Very long and difficult to remember</td>
+          <td>Short: &lt;!DOCTYPE html&gt;</td>
+        </tr>
+        <tr>
+          <td>Character set</td>
+          <td>Long meta tag with http-equiv</td>
+          <td>&lt;meta charset="UTF-8"&gt;</td>
+        </tr>
+        <tr>
+          <td>Page structure</td>
+          <td>Only &lt;div&gt; tags with ids</td>
+          <td>Semantic tags like header, nav, main, section, article, aside, footer</td>
+        </tr>
+        <tr>
+          <td>Audio and video</td>
+          <td>Needed plugins like Flash</td>
+          <td>Built-in &lt;audio&gt; and &lt;video&gt; tags</td>
+        </tr>
+        <tr>
+          <td>Graphics</td>
+          <td>Only images or plugins</td>
+          <td>&lt;canvas&gt; and &lt;svg&gt;</td>
+        </tr>
+        <tr>
+          <td>Forms</td>
+          <td>Only text, password, checkbox, radio. Validation needed JavaScript</td>
+          <td>New types like email, date, number, range, color. Also required and placeholder</td>
+        </tr>
+        <tr>
+          <td>Storage</td>
+          <td>Only cookies (about 4 KB)</td>
+          <td>localStorage and sessionStorage (about 5 MB)</td>
+        </tr>
+        <tr>
+          <td>APIs</td>
+          <td>Very few</td>
+          <td>Geolocation, Drag and Drop, Web Workers</td>
+        </tr>
+        <tr>
+          <td>Old tags</td>
+          <td>font, center, big, strike were used</td>
+          <td>These tags are removed. CSS is used instead</td>
+        </tr>
+        <tr>
+          <td>SEO and accessibility</td>
+          <td>Less meaning in the tags</td>
+          <td>Semantic tags help search engines and screen readers</td>
+        </tr>
+        <tr>
+          <td>Mobile support</td>
+          <td>Not made for mobile</td>
+          <td>Made with mobile devices in mind</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="features">
+      <h2>3. Main Features of HTML5</h2>
+
+      <div class="box">
+        <h3>Semantic tags</h3>
+        <p>These tags tell us what the content is.</p>
+        <pre>&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article&gt;&lt;/article&gt;
+  &lt;aside&gt;&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;/footer&gt;</pre>
+      </div>
+
+      <div class="box">
+        <h3>Audio and Video</h3>
+        <p>We can play media without any plugin.</p>
+        <pre>&lt;video controls width="300"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</pre>
+      </div>
+
+      <div class="box">
+        <h3>Canvas</h3>
+        <p>Used to draw shapes using JavaScript.</p>
+        <pre>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</pre>
+      </div>
+
+      <div class="box">
+        <h3>New form inputs</h3>
+        <p>The browser checks the values by itself.</p>
+        <pre>&lt;input type="email" required&gt;
+&lt;input type="date"&gt;
+&lt;input type="range" min="0" max="10"&gt;</pre>
+      </div>
+
+      <div class="box">
+        <h3>Web storage</h3>
+        <p>Data can be saved in the browser.</p>
+        <pre>localStorage.setItem("name", "Sarvesh");
+localStorage.getItem("name");</pre>
+      </div>
+    </section>
+
+    <section id="examples">
+      <h2>4. Good HTML vs Bad HTML</h2>
+      <p>Below is the same small blog page written in a bad way and in a good way.</p>
+
+      <div class="bad">
+        <h3>Bad HTML (non-semantic, poor structure)</h3>
+        <pre>&lt;html&gt;
+&lt;body&gt;
+&lt;center&gt;
+  &lt;font size="6" color="blue"&gt;My Blog&lt;/font&gt;
+&lt;/center&gt;
+&lt;div class="top"&gt;
+  &lt;div&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="post"&gt;
+  &lt;div class="big"&gt;Why I like HTML5&lt;/div&gt;
+  &lt;img src="pic.jpg"&gt;
+  It is simple. &lt;br&gt;&lt;br&gt;
+  It is powerful.
+&lt;/div&gt;
+&lt;div class="bottom"&gt;
+  &lt;b&gt;&lt;i&gt;Copyright 2026&lt;/i&gt;&lt;/b&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        <p><b>What is wrong:</b></p>
+        <ul>
+          <li>No doctype, no head, no title and no lang attribute.</li>
+          <li>Uses the old tags center and font.</li>
+          <li>Everything is a div, so the browser does not know which part is the menu or the main content.</li>
+          <li>The heading is a div, not an h1 or h2.</li>
+          <li>The menu is not a list. br is used instead of paragraphs.</li>
+          <li>The image has no alt text.</li>
+        </ul>
+      </div>
+
+      <div class="good">
+        <h3>Good HTML (semantic, proper structure)</h3>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Blog&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Blog&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Why I like HTML5&lt;/h2&gt;
+      &lt;img src="pic.jpg" alt="Laptop with code"&gt;
+      &lt;p&gt;It is simple.&lt;/p&gt;
+      &lt;p&gt;It is powerful.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2026 My Blog&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        <p><b>What is good:</b></p>
+        <ul>
+          <li>Has the doctype, lang, charset and title.</li>
+          <li>Uses header, nav, main, article and footer for the correct parts.</li>
+          <li>Proper headings, a list for the menu and real paragraphs.</li>
+          <li>The image has alt text.</li>
+          <li>The styling is in a separate CSS file.</li>
+        </ul>
+      </div>
+
+      <h3>Why good HTML is better</h3>
+      <ul>
+        <li>It is easier to read and maintain.</li>
+        <li>It is better for search engines (SEO).</li>
+        <li>Screen readers can understand the page, so it is more accessible.</li>
+        <li>It works the same in all browsers.</li>
+      </ul>
+    </section>
+
+    <section id="demo">
+      <h2>5. Demo</h2>
+
+      <h3>Semantic page layout</h3>
+      <p>This layout is made using real HTML5 semantic tags.</p>
+      <div id="layout">
+        <header>&lt;header&gt; Website title</header>
+        <nav>&lt;nav&gt; Home | About | Contact</nav>
+        <div id="middle">
+          <main>
+            &lt;main&gt;
+            <article>&lt;article&gt; Blog post</article>
+          </main>
+          <aside>&lt;aside&gt; Side links</aside>
+        </div>
+        <footer>&lt;footer&gt; Copyright</footer>
+      </div>
+
+      <h3>HTML5 form</h3>
+      <p>Try to submit the form with wrong values. The browser shows the error by itself.</p>
+      <form id="myForm">
+        <p>Name: <input type="text" id="name" placeholder="Enter name" required></p>
+        <p>Email: <input type="email" id="email" placeholder="Enter email" required></p>
+        <p>Date of birth: <input type="date"></p>
+        <p>Age (18 to 60): <input type="number" min="18" max="60"></p>
+        <p>Favourite colour: <input type="color" value="#0066cc"></p>
+        <p>Skill level: <input type="range" min="0" max="10" value="5"></p>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage"></p>
+
+      <h3>Canvas</h3>
+      <canvas id="myCanvas" width="250" height="120"></canvas>
+
+      <h3>Local storage</h3>
+      <p>Write a note and save it. It stays after refreshing the page.</p>
+      <input type="text" id="note" placeholder="Write a note">
+      <button id="saveBtn">Save</button>
+      <p id="noteMessage"></p>
+
+      <h3>Audio tag</h3>
+      <audio controls>
+        Your browser does not support audio.
+      </audio>
+    </section>
+
+    <section id="conclusion">
+      <h2>6. Conclusion</h2>
+      <p>HTML5 is the improved version of HTML. It gives us semantic tags, audio and video, canvas, better forms and web storage. Because of this, web pages are easier to build, easier to maintain and better for SEO and accessibility.</p>
+      <p>Good HTML uses the correct semantic tags and keeps the design in CSS. Bad HTML uses too many divs, old tags and misses basic things like alt text and headings.</p>
+    </section>
+
+  </main>
+
+  <footer id="pageFooter">
+    <p>Full Stack Development Assignment - Sarvesh Barale</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
